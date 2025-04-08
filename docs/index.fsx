@@ -1,5 +1,5 @@
 (**
-# BioFSharp.XYZ
+# BioFSharp.BioContainers
 
 ![Logo](./img/Logo_large.png)
  
@@ -20,10 +20,10 @@ Include the compiled binaries of your project to use in the docs like this.
 Make sure to load any external references via nuget.
 *)
 #r "nuget: BioFSharp, 2.0.0-preview.3"
-#I @"..\src\BioFSharp.XYZ\bin\Release\netstandard2.0"
-#r "BioFSharp.XYZ.dll"
+#I @"..\src\BioFSharp.BioContainers\bin\Release\netstandard2.0"
+#r "BioFSharp.BioContainers.dll"
 
-open BioFSharp.XYZ
+open BioFSharp.BioContainers
 
 let o = BioTalk.helloBio "Kev"
 

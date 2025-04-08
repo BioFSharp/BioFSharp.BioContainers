@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>Timo Mühlhaus, Kevin Schneider, F# open source contributors</Authors>
+    <Description>Use containerized biological tools directly in F#</Description>
+    <Summary>
+      BioFSharp.BioContainers gives you the possibility to leverage containerized applications without
+      leaving your F# environment. It builds on the fondation of Docker.DotNet to programmatically access
+      the the REST API on top of the docker daemon, and provides special functions to use with biocontainers -
+      a standardized way to create containerized bioinformatic software.
+    </Summary>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://BioFSharp.github.io/BioFSharp.BioContainers/</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>bioinformatics F# fsharp statistic biostatistics datascience</PackageTags>
+    <RepositoryUrl>https://github.com/BioFSharp/BioFSharp.BioContainers</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <FsDocsLicenseLink>https://github.com/BioFSharp/BioFSharp.BioContainers/blob/main/LICENSE</FsDocsLicenseLink>
+    <FsDocsReleaseNotesLink>https://github.com/BioFSharp/BioFSharp.BioContainers/blob/main/RELEASE_NOTES.md</FsDocsReleaseNotesLink>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\docs\img\icon.png" Pack="true" PackagePath="" />
+    <!--  Base functionality -->
+    <Compile Include="Docker.fs" />
+    <Compile Include="BioContainerIO.fs" />
+    <Compile Include="BioContainer.fs" />
+    <Compile Include="TargetP2.fs" />
+    <!--  DSLs -->
+    <Compile Include="Blast.fs" />
+    <Compile Include="ClustalO.fs" />
+    <Compile Include="FastP.fs" />
+    <Compile Include="Hera.fs" />
+    <Compile Include="HMMER.fs" />
+    <Compile Include="IntaRNA.fs" />
+    <Compile Include="LastAlign.fs" />
+    <Compile Include="MoFF.fs" />
+    <Compile Include="TargetP.fs" />
+    <Compile Include="SRAToolkit.fs" />
+    <Compile Include="STAR.fs" />
+    <Compile Include="Tmhmm.fs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="BioFSharp" Version="2.0.0-preview.3" />
+    <PackageReference Include="Docker.DotNet" Version="3.125.15" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+  </ItemGroup>
+
+</Project>

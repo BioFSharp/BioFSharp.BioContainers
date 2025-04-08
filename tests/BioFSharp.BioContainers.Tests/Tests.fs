@@ -1,8 +1,8 @@
-namespace BioFSharp.XYZ.Tests
+namespace BioFSharp.BioContainers.Tests
 
 open Xunit
 
-open BioFSharp.XYZ
+open BioFSharp.BioContainers
 
 type BioTalkTests() =
     [<Fact>]
